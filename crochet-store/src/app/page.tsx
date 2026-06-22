@@ -2,10 +2,12 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Socials from "./socials";
 
 const NAV_LINKS = [
   { label: "Home", target: "home" },
   { label: "Shop", target: "shop" },
+  { label: "Contact", target: "contact" },
   { label: "About", target: "about" },
 ];
 
@@ -244,7 +246,7 @@ export default function Home() {
                   color: "#E07FA0",
                 }}
               >
-                Handmade with love
+                Handmade crochet
               </span>
               <span style={{ color: "#FFB7D5", fontSize: 18 }}>✦</span>
             </div>
@@ -275,7 +277,7 @@ export default function Home() {
               }}
             >
               Beautiful, one-of-a-kind crochet pieces made with care.
-              Add your tagline or welcome message here.
+              Discover the joy of handmade crochet.
             </p>
 
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
@@ -395,6 +397,40 @@ export default function Home() {
 
           {/* Divider */}
           <div style={{ height: 2, background: "linear-gradient(90deg,transparent,#FFB7D5 30%,#FFB7D5 70%,transparent)", margin: "0 32px" }} />
+          
+          {/* ── CONTACT ─────────────────────────────────────────────── */}
+          <section
+            id="contact"
+            style={{
+              minHeight: "80vh",
+              padding: "72px 32px 88px",
+              background: "linear-gradient(180deg,#ffffff 0%,#FFF5F8 100%)",
+            }}
+          >
+            <div style={{ marginBottom: 40 }}>
+               <p style={{ fontFamily: "var(--font-nunito)", fontSize: 12, fontWeight: 800, letterSpacing: "0.2em", textTransform: "uppercase", color: "#E07FA0", marginBottom: 10 }}>
+                ✦ How to contact us
+              </p>
+              <h2 style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(26px, 5vw, 44px)", fontWeight: 600, color: "#2D1A2E", lineHeight: 1.2 }}>
+                Contact
+              </h2>
+            </div>
+
+            <div className="contact-grid">
+              
+              <div>
+                <p style={{ fontFamily: "var(--font-nunito)", fontSize: 20, lineHeight: 2.2, color: "#4d0523", marginBottom: 40 }}>
+                  You can contact us at this whatsapp number.
+                </p>
+                <p onClick={() => navigator.clipboard.writeText("+20 11 29989809")} style={{cursor: "pointer", textAlign: "center", fontSize: 40, lineHeight: 4.4, border: "1px solid #FFD6E8", color: "blue", textDecoration: "underline", fontFamily: "Arial, sans-serif"}}>
+                  +20 11 29989809
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Divider */}
+          <div style={{ height: 2, background: "linear-gradient(90deg,transparent,#FFB7D5 30%,#FFB7D5 70%,transparent)", margin: "0 32px" }} />
 
           {/* ── ABOUT ─────────────────────────────────────────────── */}
           <section
@@ -430,13 +466,23 @@ export default function Home() {
                 🎀
               </div>
               <div>
-                <p style={{ fontFamily: "var(--font-nunito)", fontSize: 15, lineHeight: 1.8, color: "#9B7B8C", marginBottom: 20 }}>
-                  Share your story here. Tell customers who you are, how you got started with crochet, and what drives your passion for creating.
+                <p style={{ fontFamily: "var(--font-nunito)", fontSize: 15, lineHeight: 1.8, color: "#9B7B8C", marginBottom: 10 }}>
+                  A cute crochet shop that sells crochet keychains, plushies, and other adorable handmade products. Make sure to grab your own unique piece and support this small business!
+                </p>
+                <p style={{ fontFamily: "var(--font-playfair)", fontSize: 20, lineHeight: 2.2, color: "#646363", opacity: "0.6", fontStyle: "italic", marginBottom: 10, paddingLeft: 80 }}>
+                  A message from the developer.
                 </p>
                 <p style={{ fontFamily: "var(--font-nunito)", fontSize: 15, lineHeight: 1.8, color: "#9B7B8C" }}>
-                  Add more details about your process, materials, or values. Make it personal and warm!
+                  Hi, I'm Yahia, a programmer with 3 years of experience in software development.
+                  Although web development isn't my primary focus, I created this website
+                  with help from Claude for its design and user interface. My interests include computer science,
+                  low-level programming, game development, and systems engineering.
+                  I mainly work with C++, along with C, Luau, Pawn, and JavaScript,
+                  and I'm always interested in building practical and efficient software solutions.
+                  Feel free to explore my profiles below to view my work, connect with me, or discuss potential projects.
                 </p>
               </div>
+              <Socials />
             </div>
           </section>
 
